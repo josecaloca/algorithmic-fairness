@@ -1,7 +1,7 @@
-data/
-videos/
-notes/
-templates/
-books/
-author statement/
 test.py
+/data
+/author statement
+/graphs
+/notes
+/templates
+/videos
