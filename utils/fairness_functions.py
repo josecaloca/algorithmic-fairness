@@ -344,13 +344,7 @@ def AdjustPostprocessing(
         ROC = postprocessing.RejectOptionClassification(
             privileged_groups=[{protected_attribute_name: privileged_num}],
             unprivileged_groups=[{protected_attribute_name: unprivileged_num}],
-            metric_name="Statistical parity difference",
-            metric_ub=0.05,
-            metric_lb=-0.05,
-            low_class_thresh=0.01,
-            high_class_thresh=0.99,
-            num_class_thresh=100,
-            num_ROC_margin=50,
+            metric_name="Statistical parity difference"
         ).fit_predict(BinLabel_true, BinLabel_predicted)
         dfAdjusted = ROC.convert_to_dataframe()[0]
 
@@ -981,10 +975,9 @@ def Estfun_ML(
     iFeatures = len(dfTrans.columns)
 
     if IncludeProtected != True:
-        if sFairnessMetric == "Reweighting":
-            iFeatures = iFeatures - 2
-        else:
-            iFeatures = iFeatures - 1
+        iFeatures = len(dfTrans.columns) - 2
+    else:
+        iFeatures = len(dfTrans.columns) - 1
 
     ##################
     # Pre-processing
@@ -1046,7 +1039,7 @@ def Estfun_ML(
     fun_ML = StringToFunc(sFun_ML)
     if sFun_ML == "Logistic Regression":
         # Logistic Regression
-        fun_MLe = fun_ML(random_state=iRandom)
+        fun_MLe = fun_ML(random_state=iRandom, penalty='none')
         print(f"Estimating the {sFun_ML} model")
     else:
         # Tree Based Machine learning Classifier

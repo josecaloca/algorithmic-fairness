@@ -1,19 +1,19 @@
-Model,AUC_train,AUC_test
-Logistic Regression Initial,0.6639318971581387,0.6645943948007473
-Logisctic Regrssion Unawareness,0.6620869331487222,0.6615580913002832
-LR Disparate Impact,0.6608465774549552,0.6619261298658126
-LR Reweighting,0.6620869331487222,0.6615580913002832
-LR Equalised Odds,0.6620869331487222,0.6615580913002832
-LR Reject Option Classification,0.6620869331487222,0.6615580913002832
-Random Forest Initial,0.704229742004245,0.6615616355365528
-Random Forest Unawareness,0.6865502661021546,0.6618936848711106
-RF Disparate Impact,0.6784321534710773,0.6641333772745464
-RF Reweighting,0.686533627460329,0.6618227774383872
-RF Equalised Odds,0.6865244542412036,0.6618801418390867
-RF Reject Option Classification,0.6865388053478303,0.6613693744379462
-Gradient Boosting Initial,0.6803804352714969,0.6740412225900727
-Gradient Boosting Unawareness,0.6753574973466483,0.669792309646885
-GB Disparate Impact,0.672899488918758,0.6688599957416181
-GB Reweighting,0.6753574973466483,0.669792309646885
-GB Equalised Odds,0.6753574973466483,0.669792309646885
-GB Reject Option Classification,0.6753574973466483,0.669792309646885
+Model,AUC train,AUC test,Overfit?,Model Quality
+Logistic Regression Initial,0.664,0.665,FALSE,Poor
+Logisctic Regrssion Unawareness,0.662,0.662,FALSE,Poor
+LR Disparate Impact,0.661,0.662,FALSE,Poor
+LR Reweighting,0.662,0.662,FALSE,Poor
+LR Equalised Odds,0.662,0.662,FALSE,Poor
+LR Reject Option Classification,0.662,0.662,FALSE,Poor
+Random Forest Initial,0.704,0.662,FALSE,Fair
+Random Forest Unawareness,0.687,0.662,FALSE,Poor
+RF Disparate Impact,0.679,0.663,FALSE,Poor
+RF Reweighting,0.686,0.661,FALSE,Poor
+RF Equalised Odds,0.687,0.662,FALSE,Poor
+RF Reject Option Classification,0.687,0.662,FALSE,Poor
+XGBoost Initial,0.688,0.672,FALSE,Poor
+XGBoost Unawareness,0.679,0.668,FALSE,Poor
+XGBoost Disparate Impact,0.676,0.667,FALSE,Poor
+XGBoost Reweighting,0.679,0.667,FALSE,Poor
+XGBoost Equalised Odds,0.679,0.668,FALSE,Poor
+XGBoost Reject Option Classification,0.679,0.668,FALSE,Poor
